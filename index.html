@@ -3,74 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memoria Familiar - U de Chile</title>
+    <title>Memoria Familiar</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav id="main-nav">
-            <div class="logo">
-                <img src="logo-u-de-chile.png" alt="Logo U de Chile">
+    <div class="min-h-screen">
+        <header class="header">
+            <div class="header-container">
+                <button id="menuButton" class="menu-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <span class="sr-only">Abrir menú</span>
+                </button>
+
+                <!-- Menú lateral -->
+                <div id="sideMenu" class="side-menu">
+                    <nav class="side-menu-nav">
+                        <a href="/" class="menu-item">Inicio</a>
+                        <a href="/abuela-olivia" class="menu-item">Recuerdo de Abuela Olivia</a>
+                        <a href="/familia-nevenka" class="menu-item">Familia de Nevenka</a>
+                        <a href="/familia-yaque" class="menu-item">Familia de Yaque</a>
+                        <a href="/familia-yayi" class="menu-item">Familia de Yayi</a>
+                        <a href="/familia-huilda" class="menu-item">Familia de Tía Huilda</a>
+                        <a href="/familia-vivi" class="menu-item">Familia de Tía Vivi</a>
+                        <a href="/familia-gueo" class="menu-item">Familia de Tío Güeo</a>
+                        <a href="/familia-ferna" class="menu-item">Familia de Tío Ferna</a>
+                        <a href="/familia-jimena" class="menu-item">Familia de Tía Jimena</a>
+                        <a href="/familia-ema" class="menu-item">Familia de Tía Ema</a>
+                        <a href="/familia-karina" class="menu-item">Familia de Tía Karina</a>
+                        <a href="/familia-mirth" class="menu-item">Familia de Tía Mirth</a>
+                    </nav>
+                    <button type="button" class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background 
+                    transition-opacity hover:opacity-100 focus:outline-none focus:ring-2
+                     focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                    <span class="sr-only">Close</span>
+                    </button>
+                </div>
+
+                <!-- Menú de navegación para desktop -->
+                <nav class="desktop-nav">
+                    <a href="/" class="nav-item">Inicio</a>
+
+                </nav>
             </div>
-            <ul class="nav-links">
-             
-                <li><a href="#abuela-olivia">Abuela Olivia</a></li>
-                <li><a href="#familia-nevenka"> Familia Nevenka</a></li>
-                <li><a href="#familia-yaque">Familia de TíaYaque</a></li>
-                <li><a href="#familia-ema">Familia de Tía Ema</a></li>
-                <li><a href="#familia-wilda">Familia de Tía Wilda</a></li>
-                <li><a href="#familia-vivi">Familia de Tía Vivi</a></li>
-                <li><a href="#familia-weo">Familia de Tío Weo</a></li>
-                <li><a href="#familia-fernando">Familia de Tío Fernando</a></li>
-                <li><a href="#familia-ximena">Familia de Tía Ximena</a></li>
-                <li><a href="#familia-karina">Familia de Tía Karina</a></li>
-                <li><a href="#familia-mirza">Familia de Tía Mirza</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+        </header>
+
+        <main class="main-content">
+            <div class="content-container">
+                <h1 class="main-title">Bienvenidos a Nuestra Memoria Familiar</h1>
+                <p class="main-description">
+                    Esta página está dedicada a la memoria de nuestro querido abuelo, 
+                    un apasionado seguidor de la Universidad de Chile. 
+                    Aquí compartimos nuestros recuerdos y celebramos el legado que nos dejó.
+                </p>
+                <div class="image-container">
+                    <img src="tata.jpg" alt="Memoria Familiar" class="main-image">
+                </div>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="inicio" class="hero">
-            <h1>Bienvenidos a Nuestra Memoria Familiar</h1>
-            <p>Un tributo a nuestro abuelo y su pasión por la U de Chile</p>
-        </section>
-
-        <section id="abuela-olivia" class="family-section">
-            <h2>Recuerdo de Abuela Olivia</h2>
-            <div class="memory-container">
-                <img src="abuela-olivia.jpg" alt="Abuela Olivia">
-                <p>Aquí van los recuerdos y anécdotas de la Abuela Olivia...</p>
-            </div>
-        </section>
-
-        <!-- Repite la estructura para las demás secciones familiares -->
-
-        <section id="galeria" class="gallery">
-            <h2>Galería de Recuerdos</h2>
-            <div class="gallery-container">
-                <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
-            </div>
-        </section>
-
-        <section id="linea-tiempo" class="timeline">
-            <h2>Nuestra Historia</h2>
-            <div class="timeline-container">
-                <!-- Los eventos se cargarán dinámicamente con JavaScript -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Memoria Familiar - U de Chile. Todos los derechos reservados.</p>
-    </footer>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
