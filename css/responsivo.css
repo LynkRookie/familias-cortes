@@ -237,8 +237,8 @@ body {
 }
 
 .lightbox-content {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 51%;
+  max-height: 102%;
 }
 
 .lightbox-image {
