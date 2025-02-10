@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Familiar - [TÍTULO DE LA PÁGINA]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="min-h-screen">
+        <header class="header">
+            <div class="header-container">
+                <button id="menuButton" class="menu-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <span class="sr-only">Abrir menú</span>
+                </button>
+
+                <div class="logo-container">
+                    <img src="logo_U.png" alt="Logo del Colegio" class="logo">
+                </div>
+            </div>
+        </header>
+
+        <!-- Menú lateral -->
+        <div id="sideMenu" class="side-menu">
+            <nav class="side-menu-nav">
+                <a href="index.html" class="menu-item">Inicio</a>
+                <a href="/familia-nevenka.html" class="menu-item">Familia de Nevenka</a>
+                <a href="/familia-yaque" class="menu-item">Familia de jacquelin</a>
+                <a href="/familia-yayi" class="menu-item">Familia de Ema</a>
+                <a href="/familia-huilda" class="menu-item">Familia de Tía Wilda</a>
+                <a href="/familia-vivi" class="menu-item">Familia de Tía Viviana</a>
+                <a href="/familia-gueo" class="menu-item">Familia de Tío Weo</a>
+                <a href="/familia-ferna" class="menu-item">Familia de Tío Fernando</a>
+                <a href="/familia-jimena" class="menu-item">Familia de Tía ximena</a>
+                <a href="/familia-ema" class="menu-item">Familia de Tía Ema</a>
+                <a href="/familia-karina" class="menu-item">Familia de Tía Karina</a>
+                <a href="/familia-mirth" class="menu-item">Familia de Tía Mirza</a>
+            </nav>
+        </div>
+
+        <main class="main-content background-container">
+            <div class="content-container">
+                <h1 class="main-title">[TÍTULO DE LA PÁGINA]</h1>
+                <p class="main-description">
+                    [DESCRIPCIÓN DE LA PÁGINA]
+                </p>
+                <div class="timeline">
+                    <!-- El contenido de la línea de tiempo se generará dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="falimias.js"></script>
+
+    <script>
+        // Datos de ejemplo para la línea de tiempo (reemplazar con datos reales)
+        const timelineData = [
+            {
+                year: 1950,
+                events: [
+                    { type: 'text', content: 'Nacimiento de Abuela Olivia' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Abuela Olivia de bebé' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
+
+                ]
+            },
+            {
+                year: 1970,
+                events: [
+                    { type: 'text', content: 'Boda de Abuela Olivia' },
+                    { type: 'image', src: 'path/to/wedding1.jpg', alt: 'Boda de Abuela Olivia' },
+                    { type: 'image', src: 'path/to/wedding2.jpg', alt: 'Familia en la boda' },
+                    { type: 'image', src: 'path/to/wedding3.jpg', alt: 'Recepción de la boda' },
+                ]
+            },
+            // Agrega más años y eventos según sea necesario
+        ];
+
+        function createTimeline(data) {
+            const timeline = document.querySelector('.timeline');
+            data.forEach(yearData => {
+                const yearElement = document.createElement('div');
+                yearElement.className = 'timeline-year';
+                yearElement.innerHTML = `
+                    <h2>${yearData.year}</h2>
+                    <div class="timeline-events">
+                        ${yearData.events.map(event => {
+                            if (event.type === 'text') {
+                                return `<p>${event.content}</p>`;
+                            } else if (event.type === 'image') {
+                                return `<img src="${event.src}" alt="${event.alt}" class="timeline-thumbnail">`;
+                            }
+                        }).join('')}
+                    </div>
+                `;
+                timeline.appendChild(yearElement);
+            });
+        }
+
+        createTimeline(timelineData);
+
+        // Funcionalidad para ampliar imágenes
+        document.querySelector('.timeline').addEventListener('click', function(e) {
+            if (e.target.classList.contains('timeline-thumbnail')) {
+                const src = e.target.src;
+                const alt = e.target.alt;
+                const lightbox = document.createElement('div');
+                lightbox.innerHTML = `
+                    <div class="lightbox-overlay">
+                        <img src="${src}" alt="${alt}" class="lightbox-image">
+                        <button class="lightbox-close">&times;</button>
+                    </div>
+                `;
+                document.body.appendChild(lightbox);
+                
+                lightbox.querySelector('.lightbox-close').addEventListener('click', function() {
+                    document.body.removeChild(lightbox);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
