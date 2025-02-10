@@ -3,68 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memoria Familiar</title>
-    <link rel="stylesheet" href="responsivo.css">
-
+    <title>Memoria para tito cortés</title>
+    <link rel="stylesheet" href="css/inicio.css">
 </head>
 <body>
-    <div class="min-h-screen">
-        <header class="header">
-            <div class="header-container">
-                <button id="menuButton" class="menu-button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                    <span class="sr-only">Abrir menú</span>
-                </button>
+    <header class="header">
+        <button class="menu-button" aria-label="Toggle Menu">☰</button>
+        <button class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    </header>
 
-                <!-- Menú lateral -->
-                <div id="sideMenu" class="side-menu">
-                    
-                    <nav class="side-menu-nav">
-                        <a href="olivia.html" class="menu-item">Recuerdo de  Olivia</a>
-                        <a href="/familia-nevenka" class="menu-item">Familia de Nevenka</a>
-                        <a href="/familia-yaque" class="menu-item">Familia de jacquelin</a>
-                        <a href="/familia-yayi" class="menu-item">Familia de Ema</a>
-                        <a href="/familia-huilda" class="menu-item">Familia de Tía Wilda</a>
-                        <a href="/familia-vivi" class="menu-item">Familia de Tía Viviana</a>
-                        <a href="/familia-gueo" class="menu-item">Familia de Tío Weo</a>
-                        <a href="/familia-ferna" class="menu-item">Familia de Tío Fernando</a>
-                        <a href="/familia-jimena" class="menu-item">Familia de Tía ximena</a>
-                        <a href="/familia-ema" class="menu-item">Familia de Tía Ema</a>
-                        <a href="/familia-karina" class="menu-item">Familia de Tía Karina</a>
-                        <a href="/familia-mirth" class="menu-item">Familia de Tía Mirza</a>
-                    </nav>
-                   
-                </div>
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close Sidebar">×</button>
+        <nav class="sidebar-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#olivia">Recuerdo de Olivia</a>
+            <a href="#nevenka">Familia de Nevenka</a>
+            <a href="#jacquelin">Familia de Jacquelin</a>
+            <a href="#ema">Familia de Ema</a>
+            <a href="#wilda">Familia de Tía Wilda</a>
+            <a href="#viviana">Familia de Tía Viviana</a>
+            <a href="#weo">Familia de Tío Weo</a>
+            <a href="#fernando">Familia de Tío Fernando</a>
+            <a href="#ximena">Familia de Tía Ximena</a>
+            <a href="#ema2">Familia de Tía Ema</a>
+            <a href="#karina">Familia de Tía Karina</a>
+            <a href="#mirza">Familia de Tía Mirza</a>
+        </nav>
+    </aside>
 
-                <!-- Menú de navegación para desktop -->
-               
-                <div class="logo-container">
-                    <img src="logo_U.png" alt="Logo del Colegio" class="logo">
-                </div>
-            </div>
-        </header>
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <h1 class="hero-title">Nuestra Historia con Tito Cortés</h1>
+                <p class="hero-description">Un espacio dedicado a preservar y compartir los momentos más especiales de nuestro abuelo con nosotros</p>
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tt2.jpg-K0MS6GBWOiC229xO8EzJEdAeVFD8d3.jpeg" alt="Familia reunida" class="hero-image">
+            </section>
 
-        <main class="main-content background-container">
-            <div class="content-container">
-                <h1 class="main-title">Bienvenidos a Nuestra Memoria Familiar</h1>
-                <p class="main-description">
-                    Esta página está dedicada a la memoria de nuestro querido abuelo, 
-                    un apasionado seguidor de la Universidad de Chile. 
-                    Aquí compartimos nuestros recuerdos y celebramos el legado que nos dejó.
-                </p>
-                <div class="image-container">
-                    <img src="tt2.jpg" alt="Memoria Familiar" class="main-image family-image">
-                </div>
-            </div>
-        </main>
+            
+
+            
+        </div>
+    </main>
+
+    <div class="lightbox">
+        <button class="lightbox-close" aria-label="Close Lightbox">×</button>
+        <div class="lightbox-content">
+            <img src="/placeholder.svg" alt="" class="lightbox-image">
+        </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="falimias.js"></script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>

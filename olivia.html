@@ -3,134 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memoria Familiar - [TÍTULO DE LA PÁGINA]</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Memoria Familiar</title>
+    <link rel="stylesheet" href="css/responsivo.css">
 </head>
 <body>
-    <div class="min-h-screen">
-        <header class="header">
-            <div class="header-container">
-                <button id="menuButton" class="menu-button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                    <span class="sr-only">Abrir menú</span>
-                </button>
+    <header class="header">
+        <button class="menu-button" aria-label="Toggle Menu">☰</button>
+        <button class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    </header>
 
-                <div class="logo-container">
-                    <img src="logo_U.png" alt="Logo del Colegio" class="logo">
-                </div>
-            </div>
-        </header>
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close Sidebar">×</button>
+        <nav class="sidebar-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#olivia">Recuerdo de Olivia</a>
+            <a href="#nevenka">Familia de Nevenka</a>
+            <a href="#jacquelin">Familia de Jacquelin</a>
+            <a href="#ema">Familia de Ema</a>
+            <a href="#wilda">Familia de Tía Wilda</a>
+            <a href="#viviana">Familia de Tía Viviana</a>
+            <a href="#weo">Familia de Tío Weo</a>
+            <a href="#fernando">Familia de Tío Fernando</a>
+            <a href="#ximena">Familia de Tía Ximena</a>
+            <a href="#ema2">Familia de Tía Ema</a>
+            <a href="#karina">Familia de Tía Karina</a>
+            <a href="#mirza">Familia de Tía Mirza</a>
+        </nav>
+    </aside>
 
-        <!-- Menú lateral -->
-        <div id="sideMenu" class="side-menu">
-            <nav class="side-menu-nav">
-                <a href="index.html" class="menu-item">Inicio</a>
-                <a href="/familia-nevenka.html" class="menu-item">Familia de Nevenka</a>
-                <a href="/familia-yaque" class="menu-item">Familia de jacquelin</a>
-                <a href="/familia-yayi" class="menu-item">Familia de Ema</a>
-                <a href="/familia-huilda" class="menu-item">Familia de Tía Wilda</a>
-                <a href="/familia-vivi" class="menu-item">Familia de Tía Viviana</a>
-                <a href="/familia-gueo" class="menu-item">Familia de Tío Weo</a>
-                <a href="/familia-ferna" class="menu-item">Familia de Tío Fernando</a>
-                <a href="/familia-jimena" class="menu-item">Familia de Tía ximena</a>
-                <a href="/familia-ema" class="menu-item">Familia de Tía Ema</a>
-                <a href="/familia-karina" class="menu-item">Familia de Tía Karina</a>
-                <a href="/familia-mirth" class="menu-item">Familia de Tía Mirza</a>
-            </nav>
-        </div>
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <h1 class="hero-title">La Familia de Nevenka</h1>
+                <p class="hero-description">Un espacio dedicado a preservar y compartir los momentos más especiales de nuestro abuelo con nosotros</p>
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tt2.jpg-K0MS6GBWOiC229xO8EzJEdAeVFD8d3.jpeg" alt="Familia reunida" class="hero-image">
+            </section>
 
-        <main class="main-content background-container">
-            <div class="content-container">
-                <h1 class="main-title">[TÍTULO DE LA PÁGINA]</h1>
-                <p class="main-description">
-                    [DESCRIPCIÓN DE LA PÁGINA]
-                </p>
+            <section class="timeline-section">
+                <h2 class="timeline-title">Línea del Tiempo</h2>
                 <div class="timeline">
-                    <!-- El contenido de la línea de tiempo se generará dinámicamente con JavaScript -->
+                    <div class="timeline-item">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tata.jpg-pSQ2WQDj8NK9CMX0xrylmAaj1gTHAx.jpeg" alt="Los Primeros Años">
+                        <div class="timeline-content">
+                            <div class="timeline-year">1950</div>
+                            <p>El comienzo de nuestra historia familiar</p>
+                        </div>
+                    </div>
+                    <!-- Add more timeline items here -->
                 </div>
-            </div>
-        </main>
+            </section>
+
+            <section class="photo-grid">
+                <h2 class="photo-grid-title">Galería de Fotos</h2>
+                <div class="photo-grid-container">
+                    <div class="photo-item">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tata.jpg-pSQ2WQDj8NK9CMX0xrylmAaj1gTHAx.jpeg" alt="Recuerdo familiar 1">
+                    </div>
+                    <div class="photo-item">
+                        <img src="img/Imagen de WhatsApp 2025-01-31 a las 22.34.27_6317d634.jpg" alt="Recuerdo familiar 2">
+                    </div>
+                    <!-- Add more photo items here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="lightbox">
+        <button class="lightbox-close" aria-label="Close Lightbox">×</button>
+        <div class="lightbox-content">
+            <img src="/placeholder.svg" alt="" class="lightbox-image">
+        </div>
     </div>
-    <script src="script.js"></script>
-    <script src="falimias.js"></script>
 
-    <script>
-        // Datos de ejemplo para la línea de tiempo (reemplazar con datos reales)
-        const timelineData = [
-            {
-                year: 1950,
-                events: [
-                    { type: 'text', content: 'Nacimiento de Abuela Olivia' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Abuela Olivia de bebé' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' }
-
-                ]
-            },
-            {
-                year: 1970,
-                events: [
-                    { type: 'text', content: 'Boda de Abuela Olivia' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Abuela Olivia de bebé' },
-
-                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' },
-                    { type: 'image', src: 'tata.jpg', alt: 'Familia en 1950' }
-                ]
-            },
-            // Agrega más años y eventos según sea necesario
-        ];
-
-        function createTimeline(data) {
-            const timeline = document.querySelector('.timeline');
-            data.forEach(yearData => {
-                const yearElement = document.createElement('div');
-                yearElement.className = 'timeline-year';
-                yearElement.innerHTML = `
-                    <h2>${yearData.year}</h2>
-                    <div class="timeline-events">
-                        ${yearData.events.map(event => {
-                            if (event.type === 'text') {
-                                return `<p>${event.content}</p>`;
-                            } else if (event.type === 'image') {
-                                return `<img src="${event.src}" alt="${event.alt}" class="timeline-thumbnail">`;
-                            }
-                        }).join('')}
-                    </div>
-                `;
-                timeline.appendChild(yearElement);
-            });
-        }
-
-        createTimeline(timelineData);
-
-        // Funcionalidad para ampliar imágenes
-        document.querySelector('.timeline').addEventListener('click', function(e) {
-            if (e.target.classList.contains('timeline-thumbnail')) {
-                const src = e.target.src;
-                const alt = e.target.alt;
-                const lightbox = document.createElement('div');
-                lightbox.innerHTML = `
-                    <div class="lightbox-overlay">
-                        <img src="${src}" alt="${alt}" class="lightbox-image">
-                        <button class="lightbox-close">&times;</button>
-                    </div>
-                `;
-                document.body.appendChild(lightbox);
-                
-                lightbox.querySelector('.lightbox-close').addEventListener('click', function() {
-                    document.body.removeChild(lightbox);
-                });
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
-
