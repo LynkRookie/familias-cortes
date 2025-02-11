@@ -247,7 +247,7 @@ body {
   object-fit: contain;
 }
 
-.lightbox-close {
+.lightbox-close {|
   position: absolute;
   top: 20px;
   right: 20px;
@@ -271,3 +271,4 @@ body {
       margin-left: 300px;
   }
 }
+
