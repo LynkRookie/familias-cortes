@@ -371,34 +371,94 @@
   }
   
 /* Responsive Styles */
+/* Estilos responsivos mejorados */
 @media screen and (max-width: 768px) {
-    .timeline::before {
-      left: 40px;
-    }
-  
-    .timeline-item {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-  
-    .timeline-item:nth-child(even) {
-      left: 0%;
-    }
-  
-    .timeline-icon {
-      left: 20px;
-      right: auto;
-    }
-  
-    .timeline-content {
-      width: 100%;
-    }
-  
-    .timeline-item:nth-child(odd) .timeline-content {
-      text-align: left;
-    }
+  .timeline-item:nth-child(even) .timeline-icon {
+    left: 11px;
   }
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .timeline::before {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0%;
+  }
+
+  .timeline-icon {
+    left: 11px;
+    right: auto;
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    text-align: left;
+  }
+
+  .timeline-album {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline-album img {
+    height: 120px;
+  }
+
+  .lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0 auto;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    font-size: 1.5rem;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .timeline-item:nth-child(even) .timeline-icon {
+    left: 11px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .timeline-album img {
+    height: 100px;
+  }
+
+  .timeline-year {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+}
   
   /* Animation for timeline items */
   @keyframes fadeIn {
